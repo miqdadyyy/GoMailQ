@@ -5,6 +5,7 @@ Microservice to send email asyncrhonusly by sending `address`, `subject`, and `c
 #### Instalation : 
 - Clone this project
 - Make sure your machine has Go with minimum version 1.13
+- Copy .env.example to .env and fill the requirements.
 - Run `go get` on this directory
 - Run `go mod download` too
 - Type `go run main.go`
