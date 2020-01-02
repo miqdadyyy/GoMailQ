@@ -6,6 +6,7 @@ import (
 	"github.com/subosito/gotenv"
 	"log"
 	"net/http"
+	"os"
 )
 
 func init() {
@@ -21,5 +22,5 @@ func main(){
 	router.HandleFunc("/send", controllers.SendMail).Methods("POST")
 
 	http.Handle("/", router)
-	log.Fatal(http.ListenAndServe(":3000", nil))
+	log.Fatal(http.ListenAndServe(":" + os.Getenv("PORT"), nil))
 }
